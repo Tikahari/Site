@@ -3,14 +3,9 @@ var express = require('express')
 var app = express();
 //print('h1')
 /* serve static files - see http://expressjs.com/en/starter/static-files.html */
-app.use('/', express.static(__dirname + './index.html'));
-  
 
-var server = http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    var message = 'Tikahari Khanal\n',
-        version = 'NodeJS ' + process.versions.node + '\n',
-        response = [message, version].join('\n');
-    res.end(response);
+app.use(express.static(__dirname));
+
+app.listen(8080, function() {
+  console.log('Example app listening on port 8080!');
 });
-server.listen();
