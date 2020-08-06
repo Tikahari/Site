@@ -60,16 +60,13 @@ app.get('/email', function(req, res){
 	  from: '_mainaccount@tikaharikhanal.com',
 	  to: 'tikaharik@gmail.com',
 	  subject: 'Site: ' + req.query.purpose + ' ' + req.query.firstname + ' ' + req.query.lastname,
-	  text: 'Message: ' + req.query.message + 
-'\n\nContact\nName: ' + 
-req.query.firstname + ' ' + req.query.lastname + '\nEmail: ' + 
-req.query.email + '\nPhone: ' + req.query.phone
+	  text: 'Message: ' + req.query.message + '\n\nContact\nName: ' + req.query.firstname + ' ' + req.query.lastname + '\nEmail: ' + req.query.email + '\nPhone: ' + req.query.phone
 	};
 	transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             return console.log(error);
         }
-		console.log('message sent')
+	    console.log('message sent')
 	});
 	res.redirect('/contact');
 })
