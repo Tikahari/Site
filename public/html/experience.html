@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+<!-- icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- my style sheet(s) -->
+<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="experience.css">
+<meta charset="utf-8">
+<meta name="description" content="Personal Site">
+<meta name="author" content="Tikahari Khanal">
+<title>Tikahari Khanal</title>
+</head>
+<body>
+<!-- Navbar -->
+<div class="navbar sticky-top">
+  <a href="/">Home</a>
+  <a href="/experience">Projects/Experience</a>
+  <a href="/blog">Blog</a>
+  <a href="/contact">Contact</a>
+</div>
+<!-- Navbar -->
+<h1 class="head"><b>Projects/Experience</b></h1>
+<div class="container resume">
+	<h3>
+		<b>Resume</b>
+	</h3>
+	<button class='resume-pdf' onclick="resume()">View</button>
+	<div id='resume-frame'></div>
+</div>
+<div class="container">
+	<div class="experience">
+		<h3 class="experience-head">
+			<b>A Computational Model of the Islets of Langerhans</b>
+		</h3>
+		<ul>
+			<li> I made a computational model of pancreatic islets (endocrine cells responsible for regulating blood glucose) using University of Florida's supercomputer, <a href="https://www.rc.ufl.edu/services/hipergator/" target="_blank">HiPerGator</a></li>
+			<li>The mathematical model involved Hodgkin-Huxley style differential equations representing the relationship between different ion channel permeabilities and the membrane potential of the cell</li>
+			<li>The program itself was written in python and relied considerably on the C and C++ libraries provided by the <a href="https://www.neuron.yale.edu/neuron/" target="_blank">NEURON framework</a></li>
+			<li> <mark>Supervisor</mark>: Damon Lamb, dlamb@va.ufl.edu</li>
+			<li> <mark>Github</mark>: <a href="https://github.com/Tikahari/Model-of-Pancreatic-Islets" target="_blank" rel="noopener noreferrer">https://github.com/Tikahari/Model-of-Pancreatic-Islets</a></li>
+			<li><a href="A-Computational-Model-of-the-Islets-of-Langerhans.pdf" download><button onclick="model_paper()">Download Paper</button></a></li>
+		</ul>
+		<h3 class="experience-head">
+			<b>UF Neurosurgery Patient Education Application</b>
+		</h3>
+		<ul>
+			<li> Working on behalf of the UF Department of Neurosurgery and College of Medicine I lead a team of 3 in the development of a combined mobile and web application which allowed patients and physicians to process, visualize, and interact with MRI data </li>
+			<li> The mobile component of the app was written for iOS (physicians at UF Shand's Health are requried to carry iPhones while on call) while the web component was developed using django</li>
+			<li> <mark>Supervisor</mark>: Frank Bova, bova@neurosurgery.ufl.edu</li>
+			<li> <mark>Github</mark>: <a href="https://github.com/Tikahari/NSG-Patient-Anatomy-App" target="_blank">https://github.com/Tikahari/NSG-Patient-Anatomy-App</a></li>
+		</ul>
+		<h3 class="experience-head">
+			<b>Simple Network Simulator</b>
+		</h3>
+		<ul>
+			<li> I worked on a network simulator that would provide the scoring function of a reinforcement learning algorithm which would attempt to predict the optimal placement of nodes given some topology</li>
+			<li> The project involved two parts: a program 
+which implemented a random forest classifier to determine whether 
+physiological data (heart rate, heart rate variability, temperature, 
+etc.) indicated the onset of a cardiac arrest, and a program which 
+predicted the placement of (network) nodes that would facilitate the 
+quickest and most effective response times</li>
+			<li><mark>Github</mark>: <a href="https://github.com/Tikahari/Simple-Network-Simulator" target="_blank">https://github.com/Tikahari/Simple-Network-Simulator</a></li>
+		</ul>
+		<h3 class="experience-head">
+			<b>Protein Folding</b>
+		</h3>
+		<ul>
+			<li> I simulated protein folding in 2D and optimized for number of hydrophobic contact points using a genetic algorithm</li>
+			<li><mark>Github</mark>: <a href="https://github.com/Tikahari/Protein-Folding" target="_blank">https://github.com/Tikahari/Protein-Folding</a> </li>
+		</ul>
+		<h3 class="experience-head">
+			<b>FACER Lock</b>
+		</h3>
+		<ul>
+			<li> I worked with a team of 3 developers on a react.js application for a Gainesville-based start-up specializing in facial recognition locks </li>
+			<li> I was responsible for the backend (models, views, controllers), payment processing, and routing</li>
+			<li> <mark>Github</mark>: <a href="https://github.com/Tikahari/FaceR-Web" target="_blank" rel="noopener noreferrer">https://github.com/Tikahari/FaceR-Web</a></li>
+			<li> <mark>Deployment</mark>: <a href="https://facerlock.herokuapp.com" target="_blank">https://facerlock.herokuapp.com</a></li>
+
+		</ul>
+	</div>
+</div>
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+	<ul class="footer-icons">
+	<li><a href="https://github.com/Tikahari" target="_blank"><i class="fa fa-github align-center"></i></a></li>
+	<!-- <li><a href="https://www.gmail.com" target="_blank"><i class="fa fa-google"></i></a></li> -->
+	<li><a href="https://www.linkedin.com/in/tikahari-khanal/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+	</ul>
+  <div class="footer-copyright text-center py-3">© 2020 Tikahari Khanal
+  </div>
+</footer>
+<!-- Footer -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+<script src="experience.js"></script>
+</html>
