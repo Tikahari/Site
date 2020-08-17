@@ -5,11 +5,9 @@ $(document).ready(function() {
             $("#reused_form").submit(function(e) {
                 console.log('form submitted')
                 e.preventDefault();
-                // $.get('/email', {3354: 3254, "dajgfa": 3232})
                 $.ajax({
                   type: "get",
                   url: "/email",
-//                  dataType: "json",
                   data: $("#reused_form").serialize(),
                   contentType: "application/x-www-form-urlencoded",
                   success: function (data) { //success 
@@ -17,10 +15,8 @@ $(document).ready(function() {
                     alert('I look forward to your contact')
 		    document.getElementById("reused_form").reset();
                   },
-                  error: function (jqxhr, status, exception) { //some sort of error }
-                    console.log('failure', status, jqxhr)
-                    // alert('Exception:', exception);
-                    console.log('exception', exception)
+                  error: function (jqxhr, status, exception) {
+                    console.log('failure', status, jqxhr, exception)
                     alert('I look forward to your contact')
 		    document.getElementById("reused_form").reset();
                     // alert('Something went wrong. Did you fill out all the fields?')

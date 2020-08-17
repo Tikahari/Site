@@ -13,8 +13,3 @@ function resume(){
 		document.getElementById("resume-frame").innerHTML = "";
 	}
 }
-
-function model_paper(){
-	console.log('download')
-	// download('Model-of-Pancreatic-Islets.pdf', text);
-}
