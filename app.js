@@ -6,13 +6,12 @@ var smtpTransport = require("nodemailer-smtp-transport");
 const fs = require('fs');
 var app = express();
 
-
 let rawdata = fs.readFileSync('config.json');
 let config = JSON.parse(rawdata);
 
 // nodemailer setup
 let transporter = nodemailer.createTransport(smtpTransport({
-     host: "mail.tikaharikhanal.com",
+     host: "az1-ss36.a2hosting.com",
      port: 2525,
      auth: {
          user: config.user_name,
@@ -20,7 +19,6 @@ let transporter = nodemailer.createTransport(smtpTransport({
      },
      rejectUnauthorized: false
 }));
-
 
 port = 8080
 
@@ -57,18 +55,18 @@ app.get('/contact', function(req, res){
 
 app.get('/email', function(req, res){
 	console.log('sending form information')
-	console.log('req', req.query)
+	console.log('request parameters', req.query)
 	var mailOptions = {
-	  from: req.query.firstname + ' ' + req.query.lastname,
+	  from: '_mainaccount@tikaharikhanal.com',
 	  to: 'tikaharik@gmail.com',
 	  subject: 'Site: ' + req.query.purpose + ' ' + req.query.firstname + ' ' + req.query.lastname,
-	  text: req.query.message + '\n<b>Contact<b>\nEmail' + req.query.email + '\nPhone' + req.query.phone
+	  text: 'Message: ' + req.query.message + '\n\nContact\nName: ' + req.query.firstname + ' ' + req.query.lastname + '\nEmail: ' + req.query.email + '\nPhone: ' + req.query.phone
 	};
 	transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             return console.log(error);
         }
-        console.log('Message sent: %s', info.messageId);
+	    console.log('message sent')
 	});
 	res.redirect('/contact');
 })
