@@ -24,6 +24,7 @@ $(document).ready(function() {
                     // alert('Something went wrong. Did you fill out all the fields?')
                  }
              });
+             document.getElementById("reused_form").reset(); 
 
         });
     });

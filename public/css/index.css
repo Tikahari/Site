@@ -1,13 +1,19 @@
 body {
-  background-color: lightblue;
+  background-color: black;
   font-family: Arial, Helvetica, sans-serif;
   /*background-image: url('im.jpg');*/
 }
 
 .container{
-  background-color: lightblue;
+  background-color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.carousel-item{
+  margin-top: 100px;
+  height: 700px;
+  width: 100%;
+} 
 
 .about{
     margin-top: 30px;

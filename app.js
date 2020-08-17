@@ -12,12 +12,13 @@ let config = JSON.parse(rawdata);
 
 // nodemailer setup
 let transporter = nodemailer.createTransport(smtpTransport({
-     service: "gmail",
-     host: "smtp.gmail.com",
+     host: "mail.tikaharikhanal.com",
+     port: 2525,
      auth: {
          user: config.user_name,
          pass: config.password
-     }
+     },
+     rejectUnauthorized: false
 }));
 
 
@@ -70,7 +71,6 @@ app.get('/email', function(req, res){
         console.log('Message sent: %s', info.messageId);
 	});
 	res.redirect('/contact');
-	// res.sendFile(path.join(__dirname + '/public/html/contact.html'))
 })
 
 
