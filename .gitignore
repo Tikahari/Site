@@ -1,3 +1,10 @@
+# Npm ignores
 node_modules/
 package-lock.json
 config.json
+
+# Keys
+*pem
+
+# One-off scripts
+connect.sh

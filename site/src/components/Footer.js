@@ -14,7 +14,7 @@ const Footer = () => {
       <h1 style={{ color: "green", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
-       © 2020 Tikahari Khanal GeeksforGeeks: A Computer Science Portal for Geeks
+       © 2020 Tikahari Khanal
       </h1>
       <Container>
           <Row>
